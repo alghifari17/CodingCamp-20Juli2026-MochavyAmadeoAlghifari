@@ -1,0 +1,216 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1. Create the HTML shell (`index.html`)": [
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784942847703
+      },
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784942856001
+      },
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784942897712
+      }
+    ],
+    "2. Write CSS layout and visual styles (`css/style.css`)": [
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784942847922
+      },
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784942901659
+      },
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784942999307
+      }
+    ],
+    "3. Implement State and Storage module (`js/app.js` — Part 1)": [
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784942848007
+      },
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784943003387
+      },
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784943045679
+      }
+    ],
+    "4. Implement the Validator module (`js/app.js` — Part 2)": [
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784942848072
+      },
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784943049721
+      },
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784943084989
+      }
+    ],
+    "5. Implement UI rendering functions (`js/app.js` — Part 3)": [
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784942848171
+      },
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784943089121
+      },
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784943149183
+      }
+    ],
+    "6. Implement Chart rendering (`js/app.js` — Part 4)": [
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784942848244
+      },
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784943153260
+      },
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784943206332
+      }
+    ],
+    "7. Wire up event handlers and initialization (`js/app.js` — Part 5)": [
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784942848297
+      },
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784943210468
+      },
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784943263622
+      }
+    ],
+    "8. Checkpoint — Manual smoke test": [
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784942848387
+      },
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784943267794
+      },
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784943353896
+      }
+    ],
+    "9.1 Handle localStorage unavailability": [
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784942848440
+      },
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784943362942
+      },
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784943419081
+      }
+    ],
+    "9.2 Handle Chart.js CDN failure gracefully": [
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784942848490
+      },
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784943427550
+      },
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784943452351
+      }
+    ],
+    "9.3 Sanitize rendered transaction names": [
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784942848536
+      },
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784943456341
+      },
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784943480936
+      }
+    ],
+    "10. Final checkpoint — Full integration review": [
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784942848582
+      },
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784943484918
+      },
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784943508105
+      }
+    ],
+    "9. Edge cases and error hardening": [
+      {
+        "executionId": "6e67aca4-934c-4b5d-98ce-5f5bfabcdf64",
+        "chatSessionId": "sess_efabae3c-0778-4751-a1e3-cf8d8d825158",
+        "timestamp": 1784943481000
+      }
+    ]
+  }
+}

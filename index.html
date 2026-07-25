@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense & Budget Visualizer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="storage-warning" hidden></div>
+  <header>
+    <h1>Expense & Budget Visualizer</h1>
+    <div id="total-spent">Total Spent: $0.00</div>
+  </header>
+
+  <main>
+    <!-- Input Form -->
+    <section id="form-section">
+      <form id="expense-form" novalidate>
+        <div class="field-group">
+          <label for="item-name">Item Name</label>
+          <input id="item-name" type="text" placeholder="e.g. Lunch" autocomplete="off">
+          <span class="error-msg" id="error-name" role="alert" aria-live="polite"></span>
+        </div>
+        <div class="field-group">
+          <label for="amount">Amount</label>
+          <input id="amount" type="number" min="0.01" step="0.01" placeholder="0.00">
+          <span class="error-msg" id="error-amount" role="alert" aria-live="polite"></span>
+        </div>
+        <div class="field-group">
+          <label for="category">Category</label>
+          <select id="category">
+            <option value="">-- Select --</option>
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Fun">Fun</option>
+          </select>
+          <span class="error-msg" id="error-category" role="alert" aria-live="polite"></span>
+        </div>
+        <button type="submit">Add Expense</button>
+      </form>
+    </section>
+
+    <!-- Chart -->
+    <section id="chart-section">
+      <canvas id="chart-canvas" aria-label="Spending by category pie chart" role="img"></canvas>
+      <p id="chart-empty" hidden>No expenses yet.</p>
+    </section>
+
+    <!-- Transaction List -->
+    <section id="list-section">
+      <h2>Transactions</h2>
+      <ul id="transaction-list" aria-label="Transaction list"></ul>
+      <p id="list-empty" hidden>No transactions recorded.</p>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

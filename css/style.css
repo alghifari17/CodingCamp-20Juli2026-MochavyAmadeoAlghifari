@@ -1,0 +1,361 @@
+/* ============================================================
+   Expense & Budget Visualizer — css/style.css
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   1. CSS Custom Properties
+   ---------------------------------------------------------- */
+:root {
+  /* Category colors */
+  --color-food:      #FF6384;
+  --color-transport: #36A2EB;
+  --color-fun:       #FFCE56;
+
+  /* Semantic UI colors */
+  --color-error:     #d9534f;
+  --color-accent:    #4a90d9;
+  --color-accent-hover: #357abd;
+  --color-bg:        #f5f6fa;
+  --color-surface:   #ffffff;
+  --color-border:    #d1d5db;
+  --color-text:      #1f2937;
+  --color-text-muted: #6b7280;
+  --color-badge-text: #ffffff;
+
+  /* Spacing & radius */
+  --radius:          6px;
+  --gap:             1.5rem;
+}
+
+/* ----------------------------------------------------------
+   2. Reset & Base
+   ---------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  min-height: 100vh;
+}
+
+/* ----------------------------------------------------------
+   3. Header
+   ---------------------------------------------------------- */
+header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem var(--gap);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+#total-spent {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+
+/* ----------------------------------------------------------
+   4. Main Layout — two-column on wide, single-column on narrow
+   ---------------------------------------------------------- */
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "form"
+    "chart"
+    "list";
+  gap: var(--gap);
+  padding: var(--gap);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Two-column layout: form | chart, list spans full width below */
+@media (min-width: 720px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "form  chart"
+      "list  list";
+  }
+}
+
+/* ----------------------------------------------------------
+   5. Section Cards
+   ---------------------------------------------------------- */
+#form-section,
+#chart-section,
+#list-section {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+#form-section  { grid-area: form;  }
+#chart-section { grid-area: chart; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+#list-section  { grid-area: list;  }
+
+#list-section h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ----------------------------------------------------------
+   6. Form
+   ---------------------------------------------------------- */
+#expense-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.field-group label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.field-group input,
+.field-group select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 0.9375rem;
+  font-family: inherit;
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  width: 100%;
+}
+
+/* Visible focus states (NFR-3: accessibility) */
+.field-group input:focus,
+.field-group select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.25);
+}
+
+/* Remove number spinner arrows on amount field for cleaner look */
+.field-group input[type="number"]::-webkit-inner-spin-button,
+.field-group input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+/* ----------------------------------------------------------
+   7. Submit Button
+   ---------------------------------------------------------- */
+button[type="submit"] {
+  padding: 0.6rem 1.25rem;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.9375rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+  align-self: flex-start;
+  min-width: 7rem;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--color-accent-hover);
+}
+
+button[type="submit"]:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.4);
+}
+
+button[type="submit"]:active {
+  background-color: var(--color-accent-hover);
+  transform: translateY(1px);
+}
+
+/* ----------------------------------------------------------
+   8. Inline Error Messages
+   ---------------------------------------------------------- */
+.error-msg {
+  font-size: 0.8125rem;
+  color: var(--color-error);
+  min-height: 1rem; /* reserve space to avoid layout shift */
+}
+
+/* When empty (no text content), the element is visually invisible */
+.error-msg:empty {
+  visibility: hidden;
+}
+
+/* ----------------------------------------------------------
+   9. Chart Section
+   ---------------------------------------------------------- */
+#chart-canvas {
+  max-width: 260px;
+  max-height: 260px;
+  width: 100%;
+  height: auto;
+}
+
+#chart-empty {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+/* ----------------------------------------------------------
+   10. Transaction List
+   ---------------------------------------------------------- */
+#transaction-list {
+  list-style: none;
+  max-height: 360px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  /* Subtle inset scroll area */
+  padding-right: 0.25rem;
+
+  /* Thin scrollbar on WebKit */
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+
+#transaction-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+#transaction-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#transaction-list::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border-radius: 3px;
+}
+
+/* ----------------------------------------------------------
+   11. Transaction List Item
+   ---------------------------------------------------------- */
+#transaction-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background-color: var(--color-bg);
+  min-width: 0; /* allow text truncation */
+}
+
+/* Item name */
+.tx-name {
+  flex: 1 1 auto;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+/* Amount */
+.tx-amount {
+  flex: 0 0 auto;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+/* Category badge */
+.tx-category {
+  flex: 0 0 auto;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2em 0.55em;
+  border-radius: 999px;
+  color: var(--color-badge-text);
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.tx-category[data-category="Food"]      { background-color: var(--color-food); }
+.tx-category[data-category="Transport"] { background-color: var(--color-transport); }
+.tx-category[data-category="Fun"]       { background-color: var(--color-fun); color: #333; }
+
+/* Delete button */
+.btn-delete {
+  flex: 0 0 auto;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+  line-height: 1.4;
+}
+
+.btn-delete:hover {
+  color: var(--color-error);
+  border-color: var(--color-error);
+  background-color: rgba(217, 83, 79, 0.06);
+}
+
+.btn-delete:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(217, 83, 79, 0.3);
+}
+
+/* Empty list message */
+#list-empty {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* ----------------------------------------------------------
+   12. Warning Banner (localStorage unavailable)
+   ---------------------------------------------------------- */
+#storage-warning {
+  background-color: #fff3cd;
+  border: 1px solid #ffc107;
+  color: #856404;
+  padding: 0.6rem 1rem;
+  font-size: 0.875rem;
+  text-align: center;
+}
